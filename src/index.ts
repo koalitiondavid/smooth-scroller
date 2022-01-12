@@ -408,6 +408,7 @@ export class SmoothScroller {
 	 * @hidden
 	 */
 	private onScroll = (e: Event) => {
+		console.log(e)
 		if (this.animated == false) {
 			this.offsetX = this.getScroll().x
 			this.offsetY = this.getScroll().y
@@ -421,6 +422,7 @@ export class SmoothScroller {
 	 */
 	private onWheel = (e: any) => {
 
+		console.log(e)
 		var targetParent = e.target.closest( '.select2-container' )
 		if( targetParent ){
 			return
