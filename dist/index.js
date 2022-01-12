@@ -104,7 +104,6 @@ var SmoothScroller = /** @class */ (function () {
                 return;
             }
             var targetParent = e.target.closest('.select2-container');
-            console.log(targetParent);
             if (targetParent) {
                 return;
             }
