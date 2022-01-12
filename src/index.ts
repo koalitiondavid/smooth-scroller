@@ -421,6 +421,7 @@ export class SmoothScroller {
 	 */
 	private onWheel = (e: any) => {
 
+		console.log(e)
 		let delta = this.getDelta(e)
 
 		let stop = this.hasOverflowScroll(e.target, Math.sign(delta))
