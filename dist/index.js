@@ -98,13 +98,13 @@ var SmoothScroller = /** @class */ (function () {
          * @hidden
          */
         this.onWheel = function (e) {
+            var targetParent = e.target.closest('.select2-container');
+            if (targetParent) {
+                return;
+            }
             var delta = _this.getDelta(e);
             var stop = _this.hasOverflowScroll(e.target, Math.sign(delta));
             if (stop) {
-                return;
-            }
-            var targetParent = e.target.closest('.select2-container');
-            if (targetParent) {
                 return;
             }
             e.preventDefault();

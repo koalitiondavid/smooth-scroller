@@ -421,15 +421,15 @@ export class SmoothScroller {
 	 */
 	private onWheel = (e: any) => {
 
+		var targetParent = e.target.closest( '.select2-container' )
+		if( targetParent ){
+			return
+		}
+
 		let delta = this.getDelta(e)
 
 		let stop = this.hasOverflowScroll(e.target, Math.sign(delta))
 		if (stop) {
-			return
-		}
-		
-		var targetParent = e.target.closest( '.select2-container' )
-		if( targetParent ){
 			return
 		}
 
