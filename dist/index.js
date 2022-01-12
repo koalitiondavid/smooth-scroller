@@ -204,7 +204,7 @@ var SmoothScroller = /** @class */ (function () {
      */
     SmoothScroller.prototype.attach = function () {
         var wrapper = this.getWrapper();
-        wrapper.addEventListener('wheel', this.onWheel, { passive: false });
+        wrapper.addEventListener('wheel', this.onWheel, { passive: true });
         wrapper.addEventListener('scroll', this.onScroll, { passive: true });
     };
     /**

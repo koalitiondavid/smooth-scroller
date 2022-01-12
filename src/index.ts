@@ -146,7 +146,7 @@ export class SmoothScroller {
 	 */
 	private attach() {
 		let wrapper = this.getWrapper()
-		wrapper.addEventListener('wheel', this.onWheel, { passive: false })
+		wrapper.addEventListener('wheel', this.onWheel, { passive: true })
 		wrapper.addEventListener('scroll', this.onScroll, { passive: true })
 	}
 
