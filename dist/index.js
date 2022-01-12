@@ -87,7 +87,6 @@ var SmoothScroller = /** @class */ (function () {
          * @hidden
          */
         this.onScroll = function (e) {
-            console.log(e);
             if (_this.animated == false) {
                 _this.offsetX = _this.getScroll().x;
                 _this.offsetY = _this.getScroll().y;
@@ -99,7 +98,6 @@ var SmoothScroller = /** @class */ (function () {
          * @hidden
          */
         this.onWheel = function (e) {
-            console.log(e);
             var targetParent = e.target.closest('.select2-container');
             if (targetParent) {
                 return;
